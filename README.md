@@ -1,5 +1,11 @@
 # JSCovReporter
 
+[Fork Details]
+
+This fork removes the original repo's dependency on backbone and underscore to render the browser report. In fact it shouldn't have any non-native browser dependencies now when viewing the report.
+
+[Original]
+
 This is a testing framework agnostic in-browser Javascript coverage reporter. It works with <a href="https://github.com/arian/CoverJS">CoverJS</a> instrumented code. The UX and appearance of the report mimic Mocha's <a href="http://visionmedia.github.com/mocha/#htmlcov-reporter">HTMLCov runner</a> which only works with nodejs. JSCovReporter should work with any testing framework such as QUnit, Jasmine, Mocha, Buster or anything you use.
 
 The files included here are borrowed from Mocha project and have been slightly modified to work with the HTML produced by this reporter and work well with <a href="https://github.com/visionmedia/mocha">Mocha's</a> <a href="http://visionmedia.github.com/mocha/#html-reporter">HTML runner</a>, currently the only Mocha in-browser runner. This is what Mocha looks like when used with JSCovRepoter:
@@ -8,9 +14,7 @@ The files included here are borrowed from Mocha project and have been slightly m
 
 ## Setup
 
-* JSCovRepoter depends on <a href="https://github.com/documentcloud/backbone">Backbone</a> (Tested with version 0.9.2) and <a href="https://github.com/documentcloud/underscore">Underscore</a> (or <a href="https://github.com/bestiejs/lodash">Lodash</a>). So make sure you include those in your HTML test runner file.
-
-* Download from this repository and include `reporter.js`, `reporter.css` and `JSCovReporter.js` files in your runner.
+* Download from this repository and include `reporter.css` and `JSCovReporter.js` files in your runner.
 
 * Your test runner body will need to contain this DOM, besides the one that your testing framework needs. Most likely you want these after the div for your framework, so that coverage appears after testing results:
 
